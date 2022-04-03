@@ -53,4 +53,4 @@ let longestWord = function (str) {
 
 console.log(
   longestWord(`Logs longest word but will not log words with wierd&/) symbols`)
-); // strings
+); // longest symbols
