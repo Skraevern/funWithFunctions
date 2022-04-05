@@ -14,13 +14,13 @@ console.log(capitalize(`oNly FirSt LetteR is CapAiTalized`)); // Only first lett
 //
 
 // Returns last letter of a string
-let lastLetter = function (inputString) {
+let returnLastLetter = function (inputString) {
   let stringLength = inputString.length;
   let lastLetter = inputString.slice(stringLength - 1);
   return lastLetter;
 };
 
-console.log(lastLetter(`Returns the last letter of a string`)); // g
+console.log(returnLastLetter(`Returns the last letter of a string`)); // g
 
 //
 
@@ -35,7 +35,7 @@ console.log(containsSpecialCharacters("test/")); //True
 //
 
 // Returns longest word in a string. Will not log words with special characters.
-let longestWord = function (str) {
+let returnLongestWord = function (str) {
   let wordsArray = str.split(" ");
   let longestWord = `a`;
   for (let i = 0; i < wordsArray.length; i++) {
@@ -52,5 +52,48 @@ let longestWord = function (str) {
 };
 
 console.log(
-  longestWord(`Logs longest word but will not log words with wierd&/) symbols`)
+  returnLongestWord(
+    `Logs longest word but will not log words with wierd&/) symbols`
+  )
 ); // longest symbols
+
+//
+
+// Repeat string function
+const repeatString = function (str, num) {
+  let string = str;
+  let number = num;
+
+  if (number === 0) {
+    string = ``;
+    return string;
+  } else if (number < 0) {
+    string = `ERROR`;
+    return string;
+  } else {
+    for (let index = 1; index < num; index++) {
+      string = string + str;
+    }
+  }
+  return string;
+};
+
+console.log(repeatString(`hey`, 3)); //heyheyhey
+
+//
+
+// Reverse string
+const reverseString = function (str) {
+  let strArray = [];
+  for (let i = 0; i < str.length; i++) {
+    strArray.push(str[i]);
+  }
+  strArray.reverse();
+  let stringReverse = strArray.join("");
+
+  return stringReverse;
+};
+
+console.log(reverseString(`hello`)); // olleh
+
+//
