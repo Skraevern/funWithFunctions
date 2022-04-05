@@ -11,6 +11,8 @@ const removeFromArray = function (arr, rem) {
 };
 console.log(removeFromArray([1, 2, 3, 4], 2)); // [1, 2, 4]
 
+//
+
 // Remove multiple arguments from array
 const removeMultipleArgumentsFromArray = function (arr, ...theArgs) {
   let newArray = [];

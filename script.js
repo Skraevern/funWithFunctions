@@ -133,3 +133,29 @@ const removeMultipleArgumentsFromArray = function (arr, ...theArgs) {
 
 console.log(removeMultipleArgumentsFromArray(["hey", 2, 3, "ho"], "hey", 3));
 // [2, "ho"]
+
+//
+
+// Sum all numbers ex (1, 4) = 1 + 2 + 3 + 4 = 10
+const sumAll = function (first, last) {
+  let firstNumber = first;
+  let lastNumber = last;
+  let total = 0;
+
+  if (firstNumber > lastNumber) {
+    firstNumber = last;
+    lastNumber = first;
+  }
+  if (firstNumber < 0 || lastNumber < 0) {
+    return "ERROR";
+  }
+  if (firstNumber === isNaN || lastNumber === isNaN) {
+    return "ERROR Nan";
+  }
+  for (let i = firstNumber; i < lastNumber + 1; i++) {
+    total = total + i;
+  }
+  return total;
+};
+
+console.log(sumAll(10, "1"));
