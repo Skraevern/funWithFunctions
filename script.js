@@ -141,21 +141,26 @@ const sumAll = function (first, last) {
   let firstNumber = first;
   let lastNumber = last;
   let total = 0;
+  console.log(typeof lastNumber);
 
   if (firstNumber > lastNumber) {
     firstNumber = last;
     lastNumber = first;
   }
+
   if (firstNumber < 0 || lastNumber < 0) {
-    return "ERROR";
+    return `ERROR`;
   }
-  if (firstNumber === isNaN || lastNumber === isNaN) {
-    return "ERROR Nan";
+
+  if (typeof firstNumber !== `number` || typeof lastNumber !== `number`) {
+    return `ERROR Nan`;
   }
+
   for (let i = firstNumber; i < lastNumber + 1; i++) {
     total = total + i;
   }
+
   return total;
 };
 
-console.log(sumAll(10, "1"));
+console.log(sumAll(10, [10, 1]));
