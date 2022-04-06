@@ -163,4 +163,4 @@ const sumAll = function (first, last) {
   return total;
 };
 
-console.log(sumAll(10, [10, 1]));
+console.log(sumAll(2, 72));
