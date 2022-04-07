@@ -197,24 +197,38 @@ const leapYears = function (year) {
 };
 
 // "works with non century years",
-console.log(leapYears(1996)) // (true);
+console.log(leapYears(1996)); // (true);
 
 // "works with non century years"
-console.log(leapYears(1997)) // (false);
+console.log(leapYears(1997)); // (false);
 
 // "works with ridiculously futuristic non century years"
-console.log(leapYears(34992) )// true;
-
-// "works with century years", 
-console.log(leapYears(1900)) // false
+console.log(leapYears(34992)); // true;
 
 // "works with century years",
-console.log(leapYears(1600)) // true
+console.log(leapYears(1900)); // false
+
+// "works with century years",
+console.log(leapYears(1600)); // true
 
 // "works with century years"
-console.log(leapYears(700)) // false
-
+console.log(leapYears(700)); // false
 
 /*
 Leap years are years divisible by four (like 1984 and 2004). However, years divisible by 100 are not leap years (such as 1800 and 1900) unless they are divisible by 400 (like 1600 and 2000, which were in fact leap years). (Yes, it's all pretty confusing)
 */
+
+const ftoc = function (fahrenheit) {
+  let celsius = ((fahrenheit - 32) * 5) / 9;
+  let celsiusRounded = Math.round(celsius * 10) / 10;
+  return celsiusRounded;
+};
+
+const ctof = function (celsius) {
+  let fahrenheit = (celsius * 9) / 5 + 32;
+  let fahrenheitRounded = Math.round(fahrenheit * 10) / 10;
+  return fahrenheitRounded;
+};
+
+console.log(ftoc(29));
+console.log(ctof());
