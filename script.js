@@ -187,18 +187,16 @@ console.log(squareSum(1, 2, 2, 8)); // 73
 // check if input year is a leap year
 
 const leapYears = function (year) {
-  if (Number.isInteger(year / 4)) {
+  if (Number.isInteger(year / 4) && Number.isInteger(year / 100) === false) {
     return true;
-  }
-
-  if (Number.isInteger(year / 100) && Number.isInteger(year / 400)) {
+  } else if (Number.isInteger(year / 100) && Number.isInteger(year / 400)) {
     return true;
   } else {
     return false;
   }
 };
 
-console.log(leapYears(1996));
+console.log(leapYears(1600));
 
 /*
 Leap years are years divisible by four (like 1984 and 2004). However, years divisible by 100 are not leap years (such as 1800 and 1900) unless they are divisible by 400 (like 1600 and 2000, which were in fact leap years). (Yes, it's all pretty confusing)
