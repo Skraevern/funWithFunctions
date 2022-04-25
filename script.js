@@ -274,3 +274,30 @@ let callDelayFunction = function () {
 // event listener for for button to log to console.
 let delayBtn = document.getElementById(`delay-button`);
 delayBtn.addEventListener(`click`, callDelayFunction);
+
+//
+
+// check if word is a palindrome
+
+const palindromes = function (str) {
+  let containsSpecialCharacters = function (str) {
+    const specialChars = /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
+    return specialChars.test(str);
+  };
+  let strArray = [];
+  for (let i = 0; i < str.length; i++) {
+    if (!containsSpecialCharacters(str[i])) {
+      strArray.push(str[i]);
+    }
+  }
+  let string = strArray.join("").replace(/\s+/g, "");
+  strArray.reverse();
+  let stringReverse = strArray.join("").replace(/\s+/g, "");
+
+  if (string.toLowerCase() === stringReverse.toLowerCase()) {
+    return true;
+  } else {
+    return false;
+  }
+};
+console.log(palindromes(`A car, a man, a maraca.!`));
